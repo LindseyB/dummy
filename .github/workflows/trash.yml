@@ -20,7 +20,7 @@ jobs:
         run: |
           git config --local user.email "hazardous.narayan@gmail.com"
           git config --local user.name "Lindsey Bieda"
-          for i in {1..10}; do git commit -m "trash" --allow-empty; done
+          number=$((RANDOM % 20)); for i in {1..$number}; do git commit -m "trash" --allow-empty; done
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
