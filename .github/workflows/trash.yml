@@ -1,4 +1,4 @@
-name: produce trash
+name: 'produce trash'
 
 # Run every hour on the hour
 on:
@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: do commits
         run: |
-          for i in {1..10}; do git commit -m "test" --allow-empty; done
+          for i in {1..10}; do git commit -m "trash" --allow-empty; done
           git push origin master
