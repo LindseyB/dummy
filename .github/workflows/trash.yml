@@ -20,8 +20,11 @@ jobs:
         run: |
           git config --local user.email "hazardous.narayan@gmail.com"
           git config --local user.name "Lindsey Bieda"
-          # Okay, so the first part tries to get a number between 1 and 10 and then we create commits in the following for loop
-          number=$(awk -v min=1 -v max=10 'BEGIN{srand(); print int(min+rand()*(max-min+1))}'); echo $number; for i in {1..$number}; do git commit -m "trash" --allow-empty; done
+          # Get a number between 1 and 10
+          number=$(awk -v min=1 -v max=10 'BEGIN{srand(); print int(min+rand()*(max-min+1))}')
+          echo $number
+          # Create that many commits
+          for i in {1..$number}; do git commit -m "trash" --allow-empty; done
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
