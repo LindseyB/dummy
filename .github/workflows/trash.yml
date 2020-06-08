@@ -24,7 +24,7 @@ jobs:
           number=$(awk -v min=1 -v max=10 'BEGIN{srand(); print int(min+rand()*(max-min+1))}')
           echo $number
           # Create that many commits
-          for i in {1..$number}; do git commit -m "trash" --allow-empty; done
+          for i in {1..$number}; do git commit -m "trash" --allow-empty; echo "did a commit."; done
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
