@@ -24,7 +24,7 @@ jobs:
           git config --local user.name "Lindsey Bieda" # setup commit name
           python make_commits.py # actually make the commits
       - name: 'Push changes'
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: 'true'
