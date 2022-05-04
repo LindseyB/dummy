@@ -1,9 +1,10 @@
 name: 'produce trash 🗑️'
 
 # Run every hour on the hour
-on:
+on: 
   schedule:
     - cron: '0 * * * *'
+  workflow_dispatch: 
 
 jobs:
   build:
