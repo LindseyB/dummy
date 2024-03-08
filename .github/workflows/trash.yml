@@ -21,8 +21,8 @@ jobs:
           python-version: '3.x'
       - name: 'Make trash commits'
         run: |
-          git config --local user.email "hazardous.narayan@gmail.com" # setup commit email
-          git config --local user.name "Lindsey Bieda" # setup commit name
+          git config --local user.email ebrahim.najar2005@gmail.com" # setup commit email
+          git config --local user.name "GoogleScraping" # setup commit name
           python make_commits.py # actually make the commits
       - name: 'Push changes'
         uses: ad-m/github-push-action@v0.6.0
